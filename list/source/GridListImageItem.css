@@ -10,6 +10,10 @@
 .enyo-gridlist-imageitem img {
 	display: block;
 	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
 }
 .enyo-gridlist-imageitem >.caption,
 .enyo-gridlist-imageitem >.sub-caption {
@@ -53,4 +57,7 @@
 .enyo-gridlist-imageitem.sized-image > .sub-caption {
 	position: absolute;
 	bottom: 0;
+}
+.enyo-gridlist-imageitem:not(.sized-image){
+	padding-bottom: 3.5rem;
 }

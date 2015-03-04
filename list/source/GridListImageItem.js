@@ -122,7 +122,14 @@
 			* @default true
 			* @public
 			*/
-			useSubCaption: true
+			useSubCaption: true,
+
+			/**
+			* @type {String}
+			* @default ''
+			* @public
+			*/
+			placeholder: ''
 		},
 
 		/**
@@ -133,7 +140,8 @@
 			{from: '.caption', to: '.$.caption.content'},
 			{from: '.caption', to: '.$.caption.showing', kind: 'enyo.EmptyBinding'},
 			{from: '.subCaption', to: '.$.subCaption.content'},
-			{from: '.subCaption', to: '.$.subCaption.showing', kind: 'enyo.EmptyBinding'}
+			{from: '.subCaption', to: '.$.subCaption.showing', kind: 'enyo.EmptyBinding'},
+			{from: '.placeholder', to: '.$.image.placeholder'}
 		],
 
 		/**
