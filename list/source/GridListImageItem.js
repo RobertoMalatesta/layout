@@ -154,8 +154,22 @@
 				this.selectedChanged();
 				this.imageSizingChanged();
 				this.centeredChanged();
+				this.placeholderChanged();
 			};
 		}),
+
+		/**
+		* @private
+		*/
+		placeholderChanged: function(){
+			var placeholder= enyo.path.rewrite(this.placeholder);
+			//for img tag
+			if (!this.imageSizing) {
+				//remove previously set default background
+				this.$.image.applyStyle('background-image','');
+				this.$.image.applyStyle('background-image', "url('"+(placeholder ? placeholder : enyo.Image.placeholder)+"')" );
+			}
+		},
 
 		/**
 		* @private
