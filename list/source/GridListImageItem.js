@@ -154,18 +154,8 @@
 				this.selectedChanged();
 				this.imageSizingChanged();
 				this.centeredChanged();
-				this.placeholderChanged();
 			};
 		}),
-
-		/**
-		* @private
-		*/
-		placeholderChanged: function(){
-			if(this.imageSizing){
-				this.placeholder= this.placeholder? this.placeholder : enyo.Image.placeholder; 
-			}
-		},
 
 		/**
 		* @private
